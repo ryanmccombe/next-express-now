@@ -1,0 +1,14 @@
+{
+  "name": "book-app",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "dependencies": {
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "redux-devtools-extension": "^2.13.2",
+    "react-redux": "^5.0.1",
+    "redux": "^3.6.0"
+  }
+}

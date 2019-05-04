@@ -1,0 +1,7 @@
+{
+  "name": "book-api",
+  "dependencies": {
+    "express": "4.16.4",
+    "dynamoose": "1.7.2"
+  }
+}
