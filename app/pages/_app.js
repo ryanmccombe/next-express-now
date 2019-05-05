@@ -1,7 +1,9 @@
 import App, { Container } from 'next/app'
 import React from 'react'
-import withReduxStore from '../redux/withStore'
 import { Provider } from 'react-redux'
+import Head from 'next/head'
+
+import withReduxStore from '../redux/withStore'
 
 class MyApp extends App {
 	render () {
@@ -9,6 +11,9 @@ class MyApp extends App {
 		
 		return (
 			<Container>
+				<Head>
+					<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
+				</Head>
 				<Provider store={reduxStore}>
 					<Component {...pageProps} />
 				</Provider>

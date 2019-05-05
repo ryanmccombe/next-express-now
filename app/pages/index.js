@@ -1,5 +1,15 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
+
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+
+import styled from 'styled-components';
+
+const Title = styled(Typography)`
+	color: red;
+`;
+
 import { incrementCount } from "../redux/store";
 
 class Index extends Component {
@@ -8,10 +18,12 @@ class Index extends Component {
 		
 		return (
 			<Fragment>
-				<div>Hello From NextJS</div>
-				<button onClick={incrementCount}>
+				<Title variant="h1" component="h2" gutterBottom>
+					Hello From NextJS.
+				</Title>
+				<Button variant="contained" onClick={incrementCount}>
 					Clicked {count} time(s)
-				</button>
+				</Button>
 			</Fragment>
 		)
 	}
