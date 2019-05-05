@@ -14,8 +14,7 @@
     "redux": "^3.6.0",
     "redux-devtools-extension": "^2.13.2",
     "styled-components": "^4.2.0",
-    "styled-jsx": "^3.2.1",
-    "typeface-roboto": "0.0.54"
+    "styled-jsx": "^3.2.1"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.8.0"

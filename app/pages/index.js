@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import styled from 'styled-components';
 
 import { incrementCount } from "../redux/store";
+import Link from "next/link";
 
 const Title = styled(Typography)`
 	color: red;
@@ -24,6 +25,9 @@ class Index extends Component {
 				<Button variant="contained" onClick={incrementCount}>
 					Clicked {count} time(s)
 				</Button>
+				<Link href="/page2">
+					<a>Page 2</a>
+				</Link>
 			</Fragment>
 		)
 	}
