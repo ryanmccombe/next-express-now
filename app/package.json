@@ -5,13 +5,15 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.0.0-beta.0",
+    "@material-ui/styles": "^4.0.0-beta.0",
+    "clsx": "latest",
     "next": "^8.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^5.0.1",
     "redux": "^3.6.0",
     "redux-devtools-extension": "^2.13.2",
-    "styled-components": "^4.2.0",
+    "styled-jsx": "^3.2.1",
     "typeface-roboto": "0.0.54"
   }
 }
