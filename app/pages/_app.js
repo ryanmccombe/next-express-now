@@ -3,9 +3,11 @@ import React from 'react'
 import { Provider } from 'react-redux'
 
 import { ThemeProvider } from '@material-ui/styles';
+import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components';
+
 import CssBaseline from '@material-ui/core/CssBaseline';
 
-import theme from '../theme';
+import { materialTheme, styledComponentsTheme } from '../theme';
 import withReduxStore from '../redux/withStore'
 
 class MyApp extends App {
@@ -22,12 +24,14 @@ class MyApp extends App {
 		
 		return (
 			<Container>
-				<ThemeProvider theme={theme}>
-					<CssBaseline />
-					<Provider store={reduxStore}>
-						<Component {...pageProps} />
-					</Provider>
-				</ThemeProvider>
+				<StyledComponentsThemeProvider theme={styledComponentsTheme}>
+					<ThemeProvider theme={materialTheme}>
+						<CssBaseline />
+						<Provider store={reduxStore}>
+							<Component {...pageProps} />
+						</Provider>
+					</ThemeProvider>
+				</StyledComponentsThemeProvider>
 			</Container>
 		)
 	}

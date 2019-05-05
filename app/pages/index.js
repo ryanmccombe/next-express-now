@@ -4,7 +4,13 @@ import { connect } from 'react-redux';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
+import styled from 'styled-components';
+
 import { incrementCount } from "../redux/store";
+
+const Title = styled(Typography)`
+	color: red;
+`;
 
 class Index extends Component {
 	render() {
@@ -12,9 +18,9 @@ class Index extends Component {
 		
 		return (
 			<Fragment>
-				<Typography variant="h1" gutterBottom>
+				<Title variant="h1" gutterBottom>
 					Hello From NextJS.
-				</Typography>
+				</Title>
 				<Button variant="contained" onClick={incrementCount}>
 					Clicked {count} time(s)
 				</Button>
