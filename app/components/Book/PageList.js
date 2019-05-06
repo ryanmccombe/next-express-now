@@ -5,7 +5,8 @@ import Checkbox from "@material-ui/core/Checkbox/Checkbox";
 import ListItemText from "@material-ui/core/ListItemText/ListItemText";
 import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction/ListItemSecondaryAction";
 import IconButton from "@material-ui/core/IconButton/IconButton";
-import CommentIcon from "@material-ui/icons/Comment";
+import CheckIcon from "@material-ui/icons/CheckBox";
+import UncheckIcon from "@material-ui/icons/CheckBoxOutlineBlank";
 import List from "@material-ui/core/List/List";
 
 import styled from 'styled-components';
@@ -17,6 +18,11 @@ const StyledList = styled(List)`
 
 const Icon = styled(ListItemSecondaryAction)`
 	pointer-events: none;
+	margin-top: 2px;
+`;
+
+const SuccessIcon = styled(CheckIcon)`
+	color: ${props => props.theme.palette.success}
 `;
 
 class PageList extends Component {
@@ -24,21 +30,21 @@ class PageList extends Component {
 		return (
 			<StyledList>
 				<ListItem role={undefined} dense button>
-					<ListItemText primary="An Introduction" />
+					<ListItemText primary="A section with a long name that goes onto two lines" />
 					<Icon>
-						<CommentIcon />
+						<SuccessIcon fontSize="small" />
 					</Icon>
 				</ListItem>
 				<ListItem role={undefined} dense button>
 					<ListItemText primary="The Middle Part" />
 					<Icon>
-						<CommentIcon />
+						<UncheckIcon fontSize="small" />
 					</Icon>
 				</ListItem>
 				<ListItem role={undefined} dense button>
 					<ListItemText primary="Happily Ever After" />
 					<Icon>
-						<CommentIcon style={{ pointerEvents: 'none'}} />
+						<UncheckIcon fontSize="small" />
 					</Icon>
 				</ListItem>
 			</StyledList>

@@ -21,17 +21,21 @@ const Accordion = styled(ExpansionPanel)`
 			display: none;
 		}
 	&.expanded {
-		margin: 0 !important;
+		margin: auto !important;
 	}
 `;
 
 const AccordionTitle = styled(ExpansionPanelSummary)`
+	text-align: left;
+	min-height: 56px !important;
 	&.expanded {
-		min-height: unset !important;
+		min-height: 56px !important;
 	}
-	.expanded {
-		margin-top: unset !important;
-		margin-bottom: unset !important;
+	.expanded:not(.MuiButtonBase-root) {
+		margin: 12px 0 !important;
+	}
+	.MuiIconButton-edgeEnd {
+		margin-right: -23px;
 	}
 `;
 
@@ -45,16 +49,29 @@ class ChapterList extends Component {
 	render() {
 		return (
 			<Wrapper>
-				{['Chapter 1', 'Chapter 2', 'Chapter 3', 'Chapter 4'].map(name => (
+				{[
+					'Why are people?',
+					'The Replicators',
+					'Immortal Coils',
+					'The Gene Machine',
+					'Aggression: stability and the selfish machine',
+					'Genemanship',
+					'Family Planning',
+					'Battle of the Generations',
+					'Battle of the Sexes',
+					'You scratch my back, I\'ll ride on yours',
+					'Memes: the new replicators',
+					'Nice guys finish first',
+					'The long reach of the gene'
+				].map(name => (
 						<Accordion key={name} elevation={0} square>
 							<AccordionTitle expandIcon={<ExpandMoreIcon />}>
-								<Typography>{name}</Typography>
+								<Typography variant="subtitle2">{name}</Typography>
 							</AccordionTitle>
 							<AccordionBody>
 								<PageList />
 							</AccordionBody>
 						</Accordion>
-
 				))}
 				
 			</Wrapper>
