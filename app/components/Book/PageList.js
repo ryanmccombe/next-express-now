@@ -16,6 +16,13 @@ const StyledList = styled(List)`
 	padding-top: 0 !important;
 `;
 
+const StyledListItem = styled(ListItem)`
+	&:hover {
+		background-color: unset !important;
+		background: linear-gradient(to right, rgba(246,248,248,0) 0%, rgba(246,248,248,1) 30%);
+	}
+`;
+
 const Icon = styled(ListItemSecondaryAction)`
 	pointer-events: none;
 	margin-top: 2px;
@@ -27,26 +34,31 @@ const SuccessIcon = styled(CheckIcon)`
 
 class PageList extends Component {
 	render() {
+		const showCheckbox = true;
+		
 		return (
 			<StyledList>
-				<ListItem role={undefined} dense button>
-					<ListItemText primary="A section with a long name that goes onto two lines" />
-					<Icon>
-						<SuccessIcon fontSize="small" />
-					</Icon>
-				</ListItem>
-				<ListItem role={undefined} dense button>
-					<ListItemText primary="The Middle Part" />
-					<Icon>
-						<UncheckIcon fontSize="small" />
-					</Icon>
-				</ListItem>
-				<ListItem role={undefined} dense button>
-					<ListItemText primary="Happily Ever After" />
-					<Icon>
-						<UncheckIcon fontSize="small" />
-					</Icon>
-				</ListItem>
+				{[{
+					title: 'Immortal Coils',
+					isComplete: true,
+				}, {
+					title: 'Family Planning'
+				}, {
+					title: 'The Replicators'
+				}].map(page => (
+					<StyledListItem role={undefined} dense button key={page.title}>
+						<ListItemText primary={page.title} />
+						{ showCheckbox && (
+							<Icon>
+								{ page.isComplete ? (
+									<SuccessIcon fontSize="small" />
+								) : (
+									<UncheckIcon fontSize="small" />
+								)}
+							</Icon>
+						)}
+					</StyledListItem>
+				))}
 			</StyledList>
 		)
 	}

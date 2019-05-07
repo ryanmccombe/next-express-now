@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
 import styled from 'styled-components';
 
+import Title from './Title';
 import ChapterList from './ChapterList';
 import Page from './Page';
 
@@ -20,6 +21,7 @@ class Book extends Component {
 		return (
 				<Grid container>
 					<Left item xs={4}>
+						<Title />
 						<ChapterList />
 					</Left>
 					<Right item xs>
