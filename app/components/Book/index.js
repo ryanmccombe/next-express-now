@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Title from './Title';
 import ChapterList from './ChapterList';
 import Page from './Page';
+import Container from "@material-ui/core/Container/Container";
 
 const Left = styled(Grid)`
 	text-align: right;
@@ -19,15 +20,17 @@ const Right = styled(Grid)`
 class Book extends Component {
 	render() {
 		return (
+			<Container maxWidth="lg">
 				<Grid container>
-					<Left item xs={4}>
+					<Left item xs={12} sm={4} md={3}>
 						<Title />
 						<ChapterList />
 					</Left>
-					<Right item xs>
+					<Right item xs md>
 						<Page />
 					</Right>
 				</Grid>
+			</Container>
 		)
 	}
 }

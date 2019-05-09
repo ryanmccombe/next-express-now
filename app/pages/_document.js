@@ -6,6 +6,8 @@ import { ServerStyleSheet as StyledComponentsStyles } from 'styled-components';
 import flush from 'styled-jsx/server';
 import { materialTheme } from '../theme';
 
+
+
 class MyDocument extends Document {
 	render() {
 		return (
@@ -21,6 +23,7 @@ class MyDocument extends Document {
 						rel="stylesheet"
 						href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
 					/>
+					
 				</Head>
 				<body>
 					<Main />

@@ -13,7 +13,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
 	display: inline-block;
-	width: 280px;
+	width: 100%;
 `;
 
 const Accordion = styled(ExpansionPanel)`
@@ -34,7 +34,7 @@ const Accordion = styled(ExpansionPanel)`
 const AccordionTitle = styled(ExpansionPanelSummary)`
 	text-align: left;
 	min-height: 56px !important;
-	padding-left: 12px !important;
+	padding-left: 0 !important;
 	&:hover {
 		background: linear-gradient(to right, rgba(246,248,248,0) 0%,rgba(246,248,248,1) 30%);
 	}

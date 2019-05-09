@@ -17,11 +17,9 @@ const Wrapper = styled.div`
 `;
 
 const Inner = styled.div`
-	width: 280px;
+	width: 100%;
 	display: inline-block;
 	text-align: left;
-	padding-left: 12px;
-	padding-right: 12px;
 `;
 
 const StyledLogo = styled(Logo)`

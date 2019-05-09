@@ -3,12 +3,18 @@ import React from 'react'
 import { Provider } from 'react-redux'
 
 import { ThemeProvider } from '@material-ui/styles';
-import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components';
+import {createGlobalStyle, ThemeProvider as StyledComponentsThemeProvider} from 'styled-components';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 import { materialTheme, styledComponentsTheme } from '../theme';
 import withReduxStore from '../redux/withStore'
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    background: linear-gradient(90deg, #FFF 50%, ${materialTheme.palette.background.offWhite} 50%);
+  }
+`;
 
 class MyApp extends App {
 	componentDidMount() {
@@ -26,6 +32,7 @@ class MyApp extends App {
 			<Container>
 				<StyledComponentsThemeProvider theme={styledComponentsTheme}>
 					<ThemeProvider theme={materialTheme}>
+						<GlobalStyle />
 						<CssBaseline />
 						<Provider store={reduxStore}>
 							<Component {...pageProps} />

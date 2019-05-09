@@ -3,7 +3,6 @@ import Typography from '@material-ui/core/Typography';
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
-	max-width: 600px;
 	margin: 3em;
 `;
 
